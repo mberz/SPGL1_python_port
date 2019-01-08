@@ -3,7 +3,7 @@ import logging
 import numpy as np
 from scipy.sparse import spdiags
 from matplotlib.mlab import find
-from matplotlib.pyplot import figure, plot, hold, title, legend, xlabel, ylabel, show
+from matplotlib.pyplot import figure, plot, title, legend, xlabel, ylabel, show
 from spgl1 import spgl1, spg_lasso, spg_bp, spg_bpdn, spg_mmv, spgSetParms
 
 logging.basicConfig(level=logging.INFO)
@@ -98,7 +98,6 @@ if __name__ == '__main__':
 
     figure()
     plot(x,'b')
-    hold(True)
     plot(x0,'ro')
     legend(('Recovered coefficients','Original coefficients'))
     title('(a) Basis Pursuit')
@@ -128,7 +127,6 @@ if __name__ == '__main__':
 
     figure()
     plot(x,'b')
-    hold(True)
     plot(x0,'ro')
     legend(('Recovered coefficients','Original coefficients'))
     title('(b) Basis Pursuit Denoise')
@@ -175,7 +173,6 @@ if __name__ == '__main__':
 
     figure()
     plot(z.real,'b+',markersize=15.0)
-    hold(True)
     plot(z0.real,'bo')
     plot(z.imag,'r+',markersize=15.0)
     plot(z0.imag,'ro')
@@ -265,7 +262,6 @@ if __name__ == '__main__':
 
     figure()
     plot(x1,'b')
-    hold(True)
     plot(x0,'ro')
     legend(('Coefficients (1)','Original coefficients'))
     title('(e) Weighted Basis Pursuit')
